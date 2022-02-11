@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Porcentajes y descuentos</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Porcentajes y descuentos</h1>
+			<p>Aquí te indicamos el descuento que tendrá tu producto</p>
+		</header>
+		<main>
+			<section>
+				<h2>Calcular precio a pagar de un producto con descuento</h2>
+				<form action="">
+					<label for="inputPrice">Escribe el precio del producto: </label>
+					<input id="inputPrice" type="number" />
+
+					<label for="inputDiscount">Escribe el descuento del producto</label>
+					<input id="inputDiscount" type="number" />
+				</form>
+				<button
+					class="descuentoporcentaje"
+					type="button"
+					onclick="priceDiscount()"
+				>
+					Calcular precio final
+				</button>
+				<p id="resultP"></p>
+				<!--Para colocar el resultado en HTML y no en un alert como había realizado inicialmente en el primer taller-->
+			</section>
+			<section>
+				<h2>Calcular precio a pagar de un producto con descuento por cupon</h2>
+				<form action="">
+					<label for="inputPriceCupon">Escribe el precio del producto: </label>
+					<input id="inputPriceCupon" type="number" />
+
+					<button class="descuentos" type="button" onclick="cuponDescuentos()">
+						Cupon de descuentos
+					</button>
+					<input
+						id="inputCupon"
+						class="inputCupon"
+						type="text"
+						placeholder="# del cupon"
+					/>
+				</form>
+				<p id="valorDescuento"></p>
+				<!--Para colocar el resultado en HTML y no en un alert como había realizado inicialmente en el primer taller-->
+			</section>
+		</main>
+
+		<script src="./descuentos.js"></script>
+	</body>
+</html>

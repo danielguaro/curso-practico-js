@@ -16,8 +16,11 @@
         let sumar = 4+4 // 8
     concatenar: juntar dos o mas strings
         let concatenar = '4' + '4' // '44' 
+
 ¿Cuál operador me permite sumar o concatenar?
     El operador + 
+
+
 2️⃣ Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
 
 Nombre -->const, string
@@ -197,10 +200,10 @@ R/ Espacio en memoria que almacena key y keyvalues, representado por {}, los key
 
 4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
 */
-cualquierArray = ['primer','segundo','tercero'];
-    function recibe(array){
-        for (dato of array) {
-            console.log(dato)
-        }
-    }
-    recibe(cualquierArray);
+cualquierArray = ['primer', 'segundo', 'tercero'];
+function recibe(array) {
+	for (dato of array) {
+		console.log(dato);
+	}
+}
+recibe(cualquierArray);

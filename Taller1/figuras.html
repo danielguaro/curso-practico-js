@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométrica | Curso Practico JS</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 780px)">
+</head>
+<body>
+  <header>
+    <h1>Figuras geométricas</h1>
+    <p>Primer taller practico de JS</p>
+  </header>
+  <main>
+      <section class="square">
+        <div class="squareImg">
+          <img src="../img/square.png" alt="square">
+        </div>
+        <h2>Calcula el área o el perímetro de un Cuadrado</h2>
+        <form action="">
+          <div>
+            <label for="InputCuadrado"> <!--El for me permite que cuando el usuario le de click al label, este redireccione directamente en el imput (obviamente, tienen que tener ambos el mismo nombre, en el caso "inputCuadrado")-->
+              Escribe el lado de tu cuadrado
+            </label> <!--Para describir el resultado de la proxima etiqueta-->
+            <input id="InputCuadrado" type="number" placeholder="0"> <!--Para que nos devuelva números exclusivamente, se agrega un id por dos cosas
+              1. Conectar el label con el input, tener en cuenta que esto se logra si la etiqueta label tiene el atributo for con el mismo nombre del id
+              2. Podernos conectar con JS
+            -->
+          </div>
+          <div class="square-buttons">
+            <button type="button" onclick="calcularPerimetroCuadrado()"> <!--Si no se expecifica el type, por estar dentro de un form, HTML lo asumirá como un type="submit"
+            Generamos el atributo onclick="nombreFuncionQueLlamamosDesdeJs" para que pueda ser conectado con JS, ojo recordar los parentesis() en el valor del onclick, si estamos llamando una FUNCIÓN
+            -->
+              perimetro cuadrado
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+              área cuadrada
+            </button>
+          </div>
+          <div id="resultadoSquare" >
+            <p>Resultado:</p>
+            <p id="resultSquare"></p>
+          </div>
+        </form>
+      </section>
+      <section class="triangle">
+        <div class="triangleImg">
+          <img src="../img/triangulo2.jpg" alt="triangle">
+        </div>
+        <h2>Calcular el perimetro de un Triangulo</h2>
+        <form action="" class="firstFormTr">
+          <div>
+            <label for="inputLado1"> Escribe el lado 1</label>
+            <input id="inputLado1" type="number" placeholder="0">
+            <label for="inputLado2"> Escribe el lado 2</label>
+            <input id="inputLado2" type="number" placeholder="0">
+            <label for="inputlado3"> Escribe el lado 3</label>
+            <input id="inputlado3" type="number" placeholder="0">      
+            <button class="perimTrian" type="button" onclick="calcularPerimetroTriangulo()">perimetro triangulo</button>
+          </div>
+          <div id="resultadoFirstTri">
+            <p>Resultado:</p>
+            <p id="resultFirstTri"></p>
+          </div>
+        </form>
+        <form action="" class="secondFormTr">
+          <h2>Calcular el área del triangulo</h2>
+          <div>
+  
+            <label for="inputBaseT">Escribe la base del triangulo</label>
+            <input id="inputBaseT" type="number" placeholder="0">
+          </div>
+          <div>
+            <label for="inputAlturaT">Escribe la altura del triangulo</label>
+            <input id="inputAlturaT" type="number" placeholder="0">
+          </div>
+          <div>
+            <button type="button" onclick="calcularAreaTriangulo()">Área triangulo</button>
+          </div>
+          <div id="resultadoSecondTri">
+            <p>Resultado:</p>
+            <p id="resultSecondTri"></p>
+          </div>
+        </form>
+      </section>
+      <section class="circle">
+        <div class="circleImg">
+          <img src="../img/circle.png" alt="circle">
+        </div>
+        <form action="">
+          <h2>Calcular el perimetro de un circulo</h2>
+          <div>
+            <label for="diametro" for="diametro">Escribe el radio del circulo</label>
+            <input id="diametro" type="number" placeholder="es igual a diametro/2">
+          </div>
+          <div class="circle-buttons">
+            <button type="button" onclick="perimetroCirculo()">perimetro circulo</button>
+            <button type="button" onclick="areaCirculo1()">área del circulo</button>
+          </div>
+          <div id="resultadoCircle">
+            <p>Resultado:</p>
+            <p id="resultCircle"></p>
+          </div>
+        </form>
+      </section>
+      <section class="triangleIso">
+        <div class="triangleIsoImg">
+          <img src="../img/isoceles2.jpg" alt="">
+        </div>
+        <form action="">
+          <h2>Calcular la altura de un triangulo isosceles</h2>
+          <div class="formIso">
+            <label for="isolado1">Escriba el lado1</label>
+            <input id="isolado1" type="number" placeholder="0">
+            <label for="isolado2">Escriba el lado2</label>
+            <input id="isolado2" type="number" placeholder="0">
+            <label for="isobase">Escriba la base del triangulo</label>
+            <input id="isobase" type="number" placeholder="0">
+            <button type="button" onclick="alturaTrianguloIsosce()">Altura triangulo Isosceles</button>
+          </div>
+          <div id="resultadoIsos">
+            <p>Resultado:</p>
+            <p id="resultIso"></p>
+          </div>
+        </form>
+      </section>
+  </main>
+
+
+  <!-- Etiqueta para poder importar los archivos de HTML -->
+  <script src="./figuras.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+header{
+  max-width: 990px;
+  margin-left: auto; /* Para que se ajuse en el centro una vez para de crecer*/
+  margin-right: auto; /* Para que se ajuse en el centro una vez para de crecer*/
+}
+main{
+  flex-wrap: wrap; /*para que nuestro contenido, se puedan reposicionar en caso de que su tamaño les permita cuando vaya creciendo el viewport */
+  flex-direction: row;
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.square, .circle{
+  order: 1;
+  width: 48%;
+  height: 300px;
+}
+.circle #resultadoCircle{
+  margin-top: 38px;
+}
+
+.triangle{
+  order: 3;
+  width: 100%;
+}
+.triangleIso{
+  order: 2;
+  width: 100%;
+}
