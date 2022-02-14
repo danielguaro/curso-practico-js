@@ -9,11 +9,32 @@
 	</head>
 	<body>
 		<header>
+			<nav>
+				<section class="header_section">
+					<a href="../index.html" class="ubication">
+						<i class="header_icon__home"></i>
+						Home
+					</a>
+					<div class="nav_workshops">
+						<a href="../Taller1/figuras.html" class="ubication">T1</a>
+						<a href="../Taller2/descuentos.html" class="ubication">T2</a>
+						<a href="../Taller3/promedio.html" class="ubication">T3</a>
+					</div>
+					<a
+						href="https://github.com/danielguaro/curso-practico-js/tree/develop"
+						class="ubication"
+					>
+						<i class="header_icon__gitHub">hola</i>
+						GitHub
+					</a>
+				</section>
+			</nav>
+
 			<h1>Porcentajes y descuentos</h1>
 			<p>Aquí te indicamos el descuento que tendrá tu producto</p>
 		</header>
 		<main>
-			<section>
+			<section class="cards">
 				<h2>Calcular precio a pagar de un producto con descuento</h2>
 				<form action="">
 					<label for="inputPrice">Escribe el precio del producto: </label>
@@ -32,7 +53,7 @@
 				<p id="resultP"></p>
 				<!--Para colocar el resultado en HTML y no en un alert como había realizado inicialmente en el primer taller-->
 			</section>
-			<section>
+			<section class="cards">
 				<h2>Calcular precio a pagar de un producto con descuento por cupon</h2>
 				<form action="">
 					<label for="inputPriceCupon">Escribe el precio del producto: </label>

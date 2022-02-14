@@ -1,520 +1,550 @@
 /* Definir Variables */
-:root{
-  --darkBlue: #30475E;
-  --mediumBlue: #7E8A97;
-  --lightBrown: #CBAF87;
-  --otherGray: #E7DEC8;
-  --justWhite: #fff;
-  --soft-blue: #e7f5ff;
-  --off-white: #faf8f7;
-  --other-blue: #21618C;
-  --greeni: #0E6655;
+:root {
+	--darkBlue: #30475e;
+	--mediumBlue: #7e8a97;
+	--lightBrown: #cbaf87;
+	--otherGray: #e7dec8;
+	--justWhite: #fff;
+	--soft-blue: #e7f5ff;
+	--off-white: #faf8f7;
+	--other-blue: #21618c;
+	--greeni: #0e6655;
+	--dark_blue: #132c33;
+	--medium_blue: #126e82;
+	--light_blue: #51c4d3;
+	--ultra-light_blue: #9fd8df;
+	--gray-blue: #d8e3e7;
+	--lighty-green: #dfeeea;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth; /* Para que la transición de un boton a otro sea mas normal y no de forma repentina.*/
 }
 
-html{
-  font-size: 62.5%;
-  scroll-behavior: smooth; /* Para que la transición de un boton a otro sea mas normal y no de forma repentina.*/
+header {
+	min-width: 320px;
+	width: 100%;
+	height: 15vh;
+	background-color: var(--darkBlue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-header{
-  min-width: 320px;
-  width: 100%;
-  height: 15vh;
-  background-color: var(--darkBlue);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-header h1{
-  margin-bottom: 12px;
-  font-size: 2.6rem;
-  color: var(--justWhite);
-}
-header p{
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--justWhite);
-}
-main{
-  min-width: 320px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-.square{
-  height: 296px;
-  background-color: var(--mediumBlue);
-  
-}
-.squareImg{
-  min-width: 300px;
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.squareImg img{
-  width: 110px;
-  height: 110px;
-}
-.square h2{
-  color: var(--off-white);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.square form{
-  /* display: flex; */
-  height: 100px;
-}
-.square form div{
-  display: flex;
-  justify-content: space-around;
-  min-width: 320px;
-  text-align: center;
-}
-.square label{
-  color: var(--justWhite);
-  /* width: 140px; */
-  min-width: 140px;
-  text-align: center;
-  align-self: center;
-  font-size: 1.4rem;
-  display:inline-block;
-}
-.square input{
-  display:inline-block;
-  min-width: 140px;
-  width: 140px;
-  height: 20px;
-  border: solid 2px ;
-  border-radius: 5px;
-}
-.square-buttons{
-  height: 80px;
-  justify-content: center;
-  align-items: center;
-
-}
-.square-buttons button{
-  height: 30px;
-  padding: 5px;
-  border-radius: 10px;
-}
-.square-buttons button:nth-child(1){
-  background-color: var(--lightBrown);
-  font-weight: bold;
-}
-.square-buttons button:nth-child(1):hover{
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  background-color: var(--otherGray);
-  color: #30475E;
-}
-.square-buttons button:nth-child(2){
-  background-color: var(--other-blue);
-  color: var(--justWhite);
-  font-weight: bold;
-}
-.square-buttons button:nth-child(2):hover{
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  background-color: var(--darkBlue);
-  color: var(--off-white);
-}
-#resultadoSquare{
-  min-width: 240px;
-  width: 240px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  background-color: var(--justWhite);
-  border-radius: 10px;
-}
-main section #resultadoSquare p{
-  font-size: 1.4rem;
-  margin-right: 10px;
-}
-main section #resultadoSquare p:nth-child(1){
-  color: black;
-}
-main section #resultadoSquare p:nth-child(2){
-  color: var(--greeni);
-  font-weight: bold;
+/* ELEMENTOS IMPORTADOS*/
+.header_section {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 2px;
+	height: 48px;
 }
 
+.ubication {
+	display: flex;
+	padding: 0 8px; /*up/down left/right */
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 2px; /* espacio entre letras*/
+	color: var(--gray-blue);
+	font-size: 20px;
+	gap: 12px;
+}
 
+.header_icon__gitHub {
+	content: url('../img/github.png'); /*Con esto me evito tener que colocar background-image: y los otros 3 estandares para que ocupe todo el espacio, para que no se repita, etc*/
+	width: 22px;
+	height: 22px;
+}
 
+.header_icon__home {
+	content: url('../img/home.png');
+	width: 22px;
+	height: 22px;
+}
 
+.nav_workshops {
+	display: none; /* Esconde el elemento y colapsa el espacio que debería ocupar*/
+}
+
+/* FIN DE ELEMENTOS IMPORTADOS*/
+
+header h1 {
+	margin-bottom: 12px;
+	font-size: 2.6rem;
+	color: var(--justWhite);
+}
+header p {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--justWhite);
+}
+main {
+	min-width: 320px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+.square {
+	height: 296px;
+	background-color: var(--mediumBlue);
+}
+.squareImg {
+	min-width: 300px;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.squareImg img {
+	width: 110px;
+	height: 110px;
+}
+.square h2 {
+	color: var(--off-white);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.square form {
+	/* display: flex; */
+	height: 100px;
+}
+.square form div {
+	display: flex;
+	justify-content: space-around;
+	min-width: 320px;
+	text-align: center;
+}
+.square label {
+	color: var(--justWhite);
+	/* width: 140px; */
+	min-width: 140px;
+	text-align: center;
+	align-self: center;
+	font-size: 1.4rem;
+	display: inline-block;
+}
+.square input {
+	display: inline-block;
+	min-width: 140px;
+	width: 140px;
+	height: 20px;
+	border: solid 2px;
+	border-radius: 5px;
+}
+.square-buttons {
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+}
+.square-buttons button {
+	height: 30px;
+	padding: 5px;
+	border-radius: 10px;
+}
+.square-buttons button:nth-child(1) {
+	background-color: var(--lightBrown);
+	font-weight: bold;
+}
+.square-buttons button:nth-child(1):hover {
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	background-color: var(--otherGray);
+	color: #30475e;
+}
+.square-buttons button:nth-child(2) {
+	background-color: var(--other-blue);
+	color: var(--justWhite);
+	font-weight: bold;
+}
+.square-buttons button:nth-child(2):hover {
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	background-color: var(--darkBlue);
+	color: var(--off-white);
+}
+#resultadoSquare {
+	min-width: 240px;
+	width: 240px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	background-color: var(--justWhite);
+	border-radius: 10px;
+}
+main section #resultadoSquare p {
+	font-size: 1.4rem;
+	margin-right: 10px;
+}
+main section #resultadoSquare p:nth-child(1) {
+	color: black;
+}
+main section #resultadoSquare p:nth-child(2) {
+	color: var(--greeni);
+	font-weight: bold;
+}
 
 /* Triangle */
-.triangle{
-  height: 536px;
-  background-color: var(--lightBrown);
-  
+.triangle {
+	height: 536px;
+	background-color: var(--lightBrown);
 }
-.triangleImg{
-  min-width: 300px;
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.triangleImg {
+	min-width: 300px;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.triangleImg img{
-  width: 110px;
-  height: 110px;
+.triangleImg img {
+	width: 110px;
+	height: 110px;
 }
-.triangle h2{
-  color: var(--off-white);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
+.triangle h2 {
+	color: var(--off-white);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	text-align: center;
 }
-.triangle h2{
-  color: var(--darkBlue);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
+.triangle h2 {
+	color: var(--darkBlue);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	text-align: center;
 }
-.triangle .firstFormTr{
-  height: 216px;
+.triangle .firstFormTr {
+	height: 216px;
 }
-.triangle form div:nth-child(1){
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 320px;
-  text-align: center;
+.triangle form div:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 320px;
+	text-align: center;
 }
-.triangle label{
-  color: var(--other-blue);
-  min-width: 140px;
-  text-align: center;
-  align-self: center;
-  font-size: 1.4rem;
+.triangle label {
+	color: var(--other-blue);
+	min-width: 140px;
+	text-align: center;
+	align-self: center;
+	font-size: 1.4rem;
 }
-.triangle input{
-  margin-bottom: 8px;
-  display:inline-block;
-  min-width: 140px;
-  width: 140px;
-  height: 20px;
-  border: solid 2px ;
-  border-radius: 5px;
+.triangle input {
+	margin-bottom: 8px;
+	display: inline-block;
+	min-width: 140px;
+	width: 140px;
+	height: 20px;
+	border: solid 2px;
+	border-radius: 5px;
 }
-.triangle button{
-  height: 30px;
-  padding: 5px;
-  border-radius: 10px;
+.triangle button {
+	height: 30px;
+	padding: 5px;
+	border-radius: 10px;
 }
-.triangle .secondFormTr{
-  height: 140px;
+.triangle .secondFormTr {
+	height: 140px;
 }
-.triangle form div:nth-child(2){
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 320px;
-  text-align: center;
-  height: 30px;
+.triangle form div:nth-child(2) {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 320px;
+	text-align: center;
+	height: 30px;
 }
-.triangle .secondFormTr input{
-  margin-bottom: 0;
+.triangle .secondFormTr input {
+	margin-bottom: 0;
 }
-.triangle form div:nth-child(3){
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 320px;
-  text-align: center;
-  height: 30px;
+.triangle form div:nth-child(3) {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 320px;
+	text-align: center;
+	height: 30px;
 }
-.triangle form div:nth-child(4){
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 320px;
+.triangle form div:nth-child(4) {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 320px;
 }
-.triangle .perimTrian{
-  background-color: var(--other-blue);
+.triangle .perimTrian {
+	background-color: var(--other-blue);
 }
-.perimTrian:hover{
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  background-color: var(--darkBlue);
-  color: var(--soft-blue);
+.perimTrian:hover {
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	background-color: var(--darkBlue);
+	color: var(--soft-blue);
 }
-.triangle button:nth-child(1){
-  background-color: var(--darkBlue);
+.triangle button:nth-child(1) {
+	background-color: var(--darkBlue);
 }
-.triangle button:nth-child(1):hover{
-  background-color:var(--other-blue);
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  color: var(--soft-blue);
-}
-
-#resultadoFirstTri{
-  margin-top: 5px;
-  min-width: 240px;
-  width: 240px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  background-color: var(--justWhite);
-  border-radius: 10px;
-}
-#resultadoFirstTri p{
-  font-size: 1.4rem;
-  margin-right: 10px;
-}
-#resultadoFirstTri p:nth-child(1){
-  color: black;
-}
-#resultadoFirstTri p:nth-child(2){
-  color: var(--greeni);
-  font-weight: bold;
+.triangle button:nth-child(1):hover {
+	background-color: var(--other-blue);
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	color: var(--soft-blue);
 }
 
-#resultadoSecondTri{
-  margin-top: 5px;
-  min-width: 240px;
-  width: 240px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  background-color: var(--justWhite);
-  border-radius: 10px;
+#resultadoFirstTri {
+	margin-top: 5px;
+	min-width: 240px;
+	width: 240px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	background-color: var(--justWhite);
+	border-radius: 10px;
 }
-#resultadoSecondTri p{
-  font-size: 1.4rem;
-  margin-right: 10px;
+#resultadoFirstTri p {
+	font-size: 1.4rem;
+	margin-right: 10px;
 }
-#resultadoSecondTri p:nth-child(1){
-  color: black;
+#resultadoFirstTri p:nth-child(1) {
+	color: black;
 }
-#resultadoSecondTri p:nth-child(2){
-  color: var(--greeni);
-  font-weight: bold;
+#resultadoFirstTri p:nth-child(2) {
+	color: var(--greeni);
+	font-weight: bold;
 }
 
-
-
-
-
-
-
+#resultadoSecondTri {
+	margin-top: 5px;
+	min-width: 240px;
+	width: 240px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	background-color: var(--justWhite);
+	border-radius: 10px;
+}
+#resultadoSecondTri p {
+	font-size: 1.4rem;
+	margin-right: 10px;
+}
+#resultadoSecondTri p:nth-child(1) {
+	color: black;
+}
+#resultadoSecondTri p:nth-child(2) {
+	color: var(--greeni);
+	font-weight: bold;
+}
 
 /* Circle */
-.circle{
-  height: 266px;
-  background-color: var(--justWhite);
-  
+.circle {
+	height: 266px;
+	background-color: var(--justWhite);
 }
-.circleImg{
-  min-width: 300px;
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.circleImg {
+	min-width: 300px;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.circle img{
-  width: 110px;
-  height: 110px;
+.circle img {
+	width: 110px;
+	height: 110px;
 }
-.circle h2{
-  color: var(--darkBlue);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
+.circle h2 {
+	color: var(--darkBlue);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	text-align: center;
 }
-.circle form{
-  /* display: flex; */
-  height: 100px;
+.circle form {
+	/* display: flex; */
+	height: 100px;
 }
-.circle form div{
-  display: flex;
-  justify-content: space-around;
-  min-width: 320px;
-  text-align: center;
+.circle form div {
+	display: flex;
+	justify-content: space-around;
+	min-width: 320px;
+	text-align: center;
 }
-.circle label{
-  color: var(--other-blue);
-  /* width: 140px; */
-  min-width: 140px;
-  text-align: center;
-  align-self: center;
-  font-size: 1.4rem;
-  display:inline-block;
+.circle label {
+	color: var(--other-blue);
+	/* width: 140px; */
+	min-width: 140px;
+	text-align: center;
+	align-self: center;
+	font-size: 1.4rem;
+	display: inline-block;
 }
-.circle input{
-  display:inline-block;
-  min-width: 140px;
-  width: 140px;
-  height: 20px;
-  border: solid 2px ;
-  border-radius: 5px;
+.circle input {
+	display: inline-block;
+	min-width: 140px;
+	width: 140px;
+	height: 20px;
+	border: solid 2px;
+	border-radius: 5px;
 }
-.circle-buttons{
-  height: 40px;
-  justify-content: center;
-  align-items: center;
+.circle-buttons {
+	height: 40px;
+	justify-content: center;
+	align-items: center;
 }
-.circle-buttons button{
-  height: 30px;
-  padding: 5px;
-  border-radius: 10px;
+.circle-buttons button {
+	height: 30px;
+	padding: 5px;
+	border-radius: 10px;
 }
-.circle-buttons button:nth-child(1){
-  background-color: var(--darkBlue);
-  font-weight: bold;
+.circle-buttons button:nth-child(1) {
+	background-color: var(--darkBlue);
+	font-weight: bold;
 }
-.circle-buttons button:nth-child(1):hover{
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  background-color: var(--otherGray);
-  color: #30475E;
+.circle-buttons button:nth-child(1):hover {
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	background-color: var(--otherGray);
+	color: #30475e;
 }
-.circle-buttons button:nth-child(2){
-  background-color: var(--other-blue);
-  color: var(--justWhite);
-  font-weight: bold;
+.circle-buttons button:nth-child(2) {
+	background-color: var(--other-blue);
+	color: var(--justWhite);
+	font-weight: bold;
 }
-.circle-buttons button:nth-child(2):hover{
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  background-color: var(--darkBlue);
-  color: var(--off-white);
-}
-
-#resultadoCircle{
-  margin-top: 5px;
-  min-width: 240px;
-  width: 260px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  background-color: darkblue;
-  border-radius: 10px;
-}
-#resultadoCircle p{
-  font-size: 1.4rem;
-  margin-right: 10px;
-}
-#resultadoCircle p:nth-child(1){
-  color: white;
-}
-#resultadoCircle p:nth-child(2){
-  color: var(--otherGray);
-  font-weight: bold;
+.circle-buttons button:nth-child(2):hover {
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	background-color: var(--darkBlue);
+	color: var(--off-white);
 }
 
-
-
-
-
-
-
+#resultadoCircle {
+	margin-top: 5px;
+	min-width: 240px;
+	width: 260px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	background-color: darkblue;
+	border-radius: 10px;
+}
+#resultadoCircle p {
+	font-size: 1.4rem;
+	margin-right: 10px;
+}
+#resultadoCircle p:nth-child(1) {
+	color: white;
+}
+#resultadoCircle p:nth-child(2) {
+	color: var(--otherGray);
+	font-weight: bold;
+}
 
 /* triangleIso */
-.triangleIso{
-  height: 366px;
-  background-color: var(--greeni);
-  
+.triangleIso {
+	height: 366px;
+	background-color: var(--greeni);
 }
-.triangleIsoImg{
-  min-width: 300px;
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.triangleIsoImg {
+	min-width: 300px;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.triangleIsoImg img{
-  width: 110px;
-  height: 110px;
+.triangleIsoImg img {
+	width: 110px;
+	height: 110px;
 }
-.triangleIso h2{
-  color: var(--soft-blue);
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  text-align: center;
+.triangleIso h2 {
+	color: var(--soft-blue);
+	font-size: 1.6rem;
+	margin-bottom: 10px;
+	text-align: center;
 }
-.formIso{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 320px;
-  text-align: center;
+.formIso {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 320px;
+	text-align: center;
 }
-.formIso label{
-  color: var(--off-white);
-  min-width: 140px;
-  text-align: center;
-  align-self: center;
-  font-size: 1.4rem;
+.formIso label {
+	color: var(--off-white);
+	min-width: 140px;
+	text-align: center;
+	align-self: center;
+	font-size: 1.4rem;
 }
-.formIso input{
-  margin-bottom: 8px;
-  display:inline-block;
-  min-width: 140px;
-  width: 140px;
-  height: 20px;
-  border: solid 2px ;
-  border-radius: 5px;
+.formIso input {
+	margin-bottom: 8px;
+	display: inline-block;
+	min-width: 140px;
+	width: 140px;
+	height: 20px;
+	border: solid 2px;
+	border-radius: 5px;
 }
-.triangleIso button{
-  height: 30px;
-  padding: 5px;
-  border-radius: 10px;
+.triangleIso button {
+	height: 30px;
+	padding: 5px;
+	border-radius: 10px;
 }
-.triangleIso button{
-  background-color: var(--otherGray);
+.triangleIso button {
+	background-color: var(--otherGray);
 }
-.triangleIso button:hover{
-  background-color:var(--other-blue);
-  box-shadow: 0 1px 6px 0 var(--justWhite);
-  color: var(--soft-blue);
+.triangleIso button:hover {
+	background-color: var(--other-blue);
+	box-shadow: 0 1px 6px 0 var(--justWhite);
+	color: var(--soft-blue);
 }
 
-#resultadoIsos{
-  margin-top: 5px;
-  min-width: 250px;
-  width: 270px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
-  background-color: black;
-  border-radius: 10px;
+#resultadoIsos {
+	margin-top: 5px;
+	min-width: 250px;
+	width: 270px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	margin-right: auto; /* Para poder centralizar aun cuando el width es pequeño*/
+	background-color: black;
+	border-radius: 10px;
 }
-#resultadoIsos p{
-  font-size: 1.4rem;
-  margin-right: 10px;
+#resultadoIsos p {
+	font-size: 1.4rem;
+	margin-right: 10px;
 }
-#resultadoIsos p:nth-child(1){
-  color: white;
+#resultadoIsos p:nth-child(1) {
+	color: white;
 }
-#resultadoIsos p:nth-child(2){
-  color: var(--otherGray);
-  font-weight: bold;
+#resultadoIsos p:nth-child(2) {
+	color: var(--otherGray);
+	font-weight: bold;
+}
+
+@media screen and (min-width: 500px) {
+	.nav_workshops {
+		display: flex;
+		gap: 6px;
+		justify-content: center;
+		align-items: center;
+	}
 }
