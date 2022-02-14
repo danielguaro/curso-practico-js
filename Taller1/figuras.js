@@ -105,7 +105,7 @@ const calcularAreaTriangulo = () => {
 		area = areaTriangulo(value1, value2);
 	// alert(area);
 	const result = document.getElementById('resultSecondTri');
-	result.innerText = `El perimetro es de ${area}`;
+	result.innerText = `El área es de ${area}`;
 };
 
 // Perimetro del circulo
